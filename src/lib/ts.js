@@ -211,6 +211,7 @@ class TS {
 }
 
 TS.STREAM = {
+  PRIVATE_DATA: 0x06,
   PACK_HEADER: 0xba,
   SYSTEM_HEADER: 0xbb,
   PROGRAM_MAP: 0xbc,
