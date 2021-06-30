@@ -61,19 +61,20 @@ export default class Player {
     if (options.vu !== false) {
       this.vu = {
         pts: -1,
-        channels: [],
+        channels: []
       };
       this.vu.write = (pts, buffers) => {
         this.vu.pts += 1;
-        const channels = buffers[0];
+        const [channels] = buffers;
         if (channels) {
-          const channelCount = channels[0];
-          this.vu.channels = [...channels.slice(1, channelCount + 1)];
+          const [channelCount] = channels;
+          this.vu.channels = [];
+          this.vu.channels.push(...channels.slice(1, channelCount + 1));
         } else {
           this.vu.channels = [];
         }
       };
-      this.demuxer.connect(JSMpeg.Demuxer.TS.STREAM.PRIVATE_DATA, this.vu);
+      this.demuxer.connect(TS.STREAM.PRIVATE_DATA, this.vu);
     }
 
     if (options.video !== false) {
