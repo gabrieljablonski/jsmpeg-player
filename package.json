@@ -1,6 +1,6 @@
 {
-  "name": "@cycjimmy/jsmpeg-player",
-  "version": "5.0.1",
+  "name": "@viacast/jsmpeg-player",
+  "version": "5.1.0",
   "description": "MPEG1 Video Player Based On JSMpeg",
   "main": "dist/jsmpeg-player.cjs.js",
   "module": "dist/jsmpeg-player.esm.js",
@@ -18,21 +18,25 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cycjimmy/jsmpeg-player.git"
+    "url": "git+https://github.com/gabrieljablonski/jsmpeg-player.git"
   },
   "keywords": [
     "jsmpeg",
     "TS"
   ],
-  "author": "cycjimmy <cycjimmy@gmail.com> (https://github.com/cycjimmy)",
+  "author": "Gabriel Jablonski <gabriel.g.jablonski@gmail.com> (https://github.com/gabrieljablonski)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/cycjimmy/jsmpeg-player/issues"
+    "url": "https://github.com/gabrieljablonski/jsmpeg-player/issues"
   },
-  "homepage": "https://github.com/cycjimmy/jsmpeg-player#readme",
+  "homepage": "https://github.com/gabrieljablonski/jsmpeg-player#readme",
   "files": [
     "/dist"
   ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
   "dependencies": {
     "@cycjimmy/awesome-js-funcs": "^2.3.0",
     "@cycjimmy/sass-lib": "^1.0.3"
