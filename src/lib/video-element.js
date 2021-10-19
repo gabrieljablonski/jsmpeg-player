@@ -25,6 +25,7 @@ export default class VideoElement {
       picMode = false,
       progressive = true,
       chunkSize = 1024 * 1024,
+      videoBufferSize = 1024 * 1024,
       hooks = {}
     } = {},
     overlayOptions = {}
@@ -42,6 +43,7 @@ export default class VideoElement {
         decodeFirstFrame,
         progressive,
         chunkSize,
+        videoBufferSize,
         hooks: Object.assign(
           {
             play: () => {},

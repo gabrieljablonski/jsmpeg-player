@@ -1,6 +1,6 @@
 {
   "name": "@viacast/jsmpeg-player",
-  "version": "5.1.2",
+  "version": "5.1.3",
   "description": "MPEG1 Video Player Based On JSMpeg",
   "main": "dist/jsmpeg-player.cjs.js",
   "module": "dist/jsmpeg-player.esm.js",
