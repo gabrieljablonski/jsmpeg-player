@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
-#include <unistd.h> 
+#include <unistd.h>
 #include <inttypes.h>
 #include <netinet/in.h>
 #include <sys/socket.h>
@@ -92,7 +92,7 @@ int http_get_response(char *response) {
 void http_write_header(char *host, char *path) {
   char *http_header = "POST %s HTTP/1.1\r\nTransfer-Encoding: chunked\r\nUser-Agent: xcoder\r\nAccept: /\r\nConnection: close\r\nHost: %s\r\nIcy-MetaData: 1\r\n\r\n";
   char message[10240];
-  snprintf(message, 10249, http_header, path, host);
+  snprintf(message, 10239, http_header, path, host);
   http_write(message, strlen(message));
 }
 
@@ -120,13 +120,13 @@ int main(int argc, char **argv)
 
   int pid = DEFAULT_PID;
   int truncate_vu_file = DEFAULT_TRUNCATE_VU;
-	
+
   if (argc < 5) {
     fprintf(
-      stderr, 
-      "Usage:\n\n\t%s <vu-file> <host> <port> <path> [<PID> [<truncate-vu>]] (PID defaults to %d. VU file is truncated at %d bytes by default.)\n\n", 
-      argv[0], 
-      DEFAULT_PID, 
+      stderr,
+      "Usage:\n\n\t%s <vu-file> <host> <port> <path> [<PID> [<truncate-vu>]] (PID defaults to %d. VU file is truncated at %d bytes by default.)\n\n",
+      argv[0],
+      DEFAULT_PID,
       DEFAULT_TRUNCATE_VU
     );
     return -1;
@@ -149,8 +149,8 @@ int main(int argc, char **argv)
   if (argc > 6) {
     truncate_vu_file = atoi(argv[6]);
   }
-	
-	if (pid < 1 || pid > MAX_PID ) { 
+
+	if (pid < 1 || pid > MAX_PID ) {
 		fprintf(stderr, "Invalid PID %s. Should be in range [1, %d].\n", argv[5], MAX_PID);
     fclose(vu_file);
 		return -3;
@@ -160,7 +160,7 @@ int main(int argc, char **argv)
   http_write_header(host, path);
 
   while (1) {
-	  ts_packet[0] = 0x47; /* sync byte */ 
+	  ts_packet[0] = 0x47; /* sync byte */
 
     // 2 bytes for PID
     ts_packet[1] = 0x40 | pid >> 8;
