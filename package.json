@@ -1,15 +1,10 @@
 {
   "name": "@viacast/jsmpeg-player",
-  "version": "6.0.2",
+  "version": "6.0.3",
   "description": "MPEG1 Video Player Based On JSMpeg",
-  "type": "module",
-  "main": "dist/jsmpeg-player.cjs",
+  "main": "dist/jsmpeg-player.cjs.js",
   "module": "dist/jsmpeg-player.esm.js",
   "browser": "dist/jsmpeg-player.umd.min.js",
-  "exports": {
-    "require": "./dist/jsmpeg-player.cjs",
-    "import": "./dist/jsmpeg-player.esm.js"
-  },
   "scripts": {
     "start": "npm run dev",
     "lint": "eslint --ext .js,.cjs,.mjs -c .eslintrc .",
