@@ -26,7 +26,7 @@ export default class VideoElement {
       progressive = true,
       chunkSize = 1024 * 1024,
       videoBufferSize = 1024 * 1024,
-      hooks = {}
+      hooks = {},
     } = {},
     overlayOptions = {},
   ) {

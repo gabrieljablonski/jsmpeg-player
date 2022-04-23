@@ -61,7 +61,7 @@ export default class Player {
     if (options.vu !== false) {
       this.vu = {
         pts: -1,
-        channels: []
+        channels: [],
       };
       this.vu.write = (pts, buffers) => {
         this.vu.pts += 1;
