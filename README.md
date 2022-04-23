@@ -1,13 +1,11 @@
 # JSMpeg Player(TS Player)
 
 ![][workflows-badge-image]
-[![build status][travis-image]][travis-url]
 [![libraries dependency status][libraries-status-image]][libraries-status-url]
 [![libraries sourcerank][libraries-sourcerank-image]][libraries-sourcerank-url]
 [![Release date][release-date-image]][release-url]
 [![rollup][rollup-image]][rollup-url]
 [![semantic-release][semantic-image]][semantic-url]
-[![jest][jest-image]][jest-url]
 [![npm license][license-image]][download-url]
 
 
@@ -83,7 +81,7 @@ new JSMpeg.VideoElement(videoWrapper, videoUrl [, options] [, overlayOptions])
 ## CDN
 To use via a CDN include this in your HTML:
 ```text
-<script src="https://cdn.jsdelivr.net/npm/@cycjimmy/jsmpeg-player@5/dist/jsmpeg-player.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@cycjimmy/jsmpeg-player@6/dist/jsmpeg-player.umd.min.js"></script>
 ```
 
 ## Encoding Video/Audio for [jsmpeg](https://github.com/phoboslab/jsmpeg) by [ffmpeg](https://ffmpeg.org/). E.g:
@@ -115,8 +113,6 @@ $ ffmpeg -i input.mp4 -f mpegts \
 [jsdelivr-url]: https://www.jsdelivr.com/package/npm/@cycjimmy/jsmpeg-player
 
 [workflows-badge-image]: https://github.com/cycjimmy/jsmpeg-player/workflows/Test%20CI/badge.svg
-[travis-image]: https://img.shields.io/travis/cycjimmy/jsmpeg-player
-[travis-url]: https://travis-ci.org/cycjimmy/jsmpeg-player
 
 [libraries-status-image]: https://img.shields.io/librariesio/release/npm/@cycjimmy/jsmpeg-player
 [libraries-sourcerank-image]: https://img.shields.io/librariesio/sourcerank/npm/@cycjimmy/jsmpeg-player
@@ -131,9 +127,6 @@ $ ffmpeg -i input.mp4 -f mpegts \
 
 [semantic-image]: https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg
 [semantic-url]: https://github.com/semantic-release/semantic-release
-
-[jest-image]: https://img.shields.io/badge/tested_with-jest-99424f.svg
-[jest-url]: https://github.com/facebook/jest
 
 [license-image]: https://img.shields.io/npm/l/@cycjimmy/jsmpeg-player
 
